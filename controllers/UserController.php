@@ -18,39 +18,40 @@ class UserController {
             $this->userModel->insertdata($products,$files);
 //            var_dump($files);
 
-//            header("location:/");
+            header("location:/");
         }else{
-            require "views/user/createProducts.php";
+            require "views/products/createProducts.php";
         }
 
     }
 
-//    public function edit($user) {
-////        var_dump($user);
-//
-//        $this->userModel->update($user['id'],$user['User_Name'],$user['User_Email'],$user['Password']);
-//        require 'views/user/edit.php';
-//
-//        // Handle form submission for updating an existing user
-//    }
-//
-//    public function delete($id) {
-//        $this->userModel->delete($id);
-//
-//        // Handle user deletion
-//    }
+    public function edit($product,$files) {
+//        var_dump($product);
+var_dump($files);
+        $this->userModel->update($product,$files);
+        require 'views/products/edit.php';
 
-    public function gettingAllUser() {
-        $alluser=$this->userModel->getAllUsersFromDb();
-        require 'views/user/index.php';
-        // Retrieve all users from the UserModel and load the index view
+        // Handle form submission for updating an existing user
     }
 //
-//    public function viewOneUser($id) {
-//        $alluser=$this->userModel->read("$id");
-//        require 'views/user/edit.php';
+    public function deleteProduct($id) {
+        $this->userModel->deleteOnDb($id);
+
+        // Handle user deletion
+    }
+
+    public function listOffAllProducts() {
+        // Retrieve all users from the UserModel and load the index view
+
+        $allproducts=$this->userModel->getAllProductsFromDb();
+        require 'views/products/listOffAllProducts.php';
+    }
 //
-//
-//        // Retrieve a specific user from the UserModel and load the view view
-//    }
+    public function viewOneProduct($id) {
+        $particularProduct=$this->userModel->read("$id");
+        require 'views/products/edit.php';
+
+
+        // Retrieve a specific user from the UserModel and load the view view
+    }
 }

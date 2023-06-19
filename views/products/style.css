@@ -42,6 +42,10 @@ input[type="text"],[type="number"], input[type="password"], input[type="email"]
     width: 100%;
 }
 
+.productimage{
+  height: 75px;
+  width: 75px;
+}
 
 input[type="submit"] {
   background-color: #0c8fc1;

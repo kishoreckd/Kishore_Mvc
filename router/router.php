@@ -10,10 +10,6 @@ class router
         $this->controller = new UserController();
     }
 
-    public function check($middleware)
-    {
-        $this->router[count($this->router) - 1]['middleware'] = $middleware;
-    }
 
     public function get($uri, $action)
     {
@@ -21,7 +17,6 @@ class router
             'uri' => $uri,
             'action' => $action,
             'method' => 'GET',
-            'middleware' => null
         ];
         return $this;
     }
@@ -31,7 +26,6 @@ class router
             'uri' => $uri,
             'action' => $action,
             'method' => 'GET',
-            'middleware' => null
         ];
         return $this;
     }
@@ -40,8 +34,7 @@ class router
         $this->router[] = [
             'uri' => $uri,
             'action' => $action,
-            'method' => 'GET',
-            'middleware' => null
+            'method' => 'DELETE',
         ];
         return $this;
     }
@@ -50,8 +43,7 @@ class router
         $this->router[] = [
             'uri' => $uri,
             'action' => $action,
-            'method' => 'GET',
-            'middleware' => null
+            'method' => 'PATCH',
         ];
         return $this;
     }
@@ -67,20 +59,20 @@ class router
                             $this->controller->createNewProducts($_POST,$_FILES['image']);
                             break;
                         case 'edit':
-                            $this->controller->edit($_POST);
+                            $this->controller->edit($_POST,$_FILES['image']);
                             break;
                         case 'delete':
-                            $this->controller->delete($_POST['delete']);
+                            $this->controller->deleteProduct($_POST);
                             break;
                         case 'view':
-                            $this->controller->viewOneUser($_POST['view']);
+                            $this->controller->viewOneProduct($_POST['view']);
                             break;
                         default:
-                            $this->controller->gettingAllUser();
+                            $this->controller->listOffAllProducts();
                     }
 
                 } else {
-                    $this->controller->getting_all_user();
+                    $this->controller->listOffAllProducts();
                 }
 
             }

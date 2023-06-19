@@ -7,9 +7,9 @@ $router = new router();
 
 $router->get('/','list');
 $router->post('/create','create');
-//$router->delete('/delete','delete');
-//$router->get('/view','view');
-//$router->patch('/edit','edit');
+$router->delete('/delete','delete');
+$router->get('/view','view');
+$router->patch('/edit','edit');
 
 
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> AddProducts</title>
-    <link rel="stylesheet" href="/views/user/style.css">
+    <link rel="stylesheet" href="/views/products/style.css">
 </head>
 <body>
 
