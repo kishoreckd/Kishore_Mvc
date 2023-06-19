@@ -13,12 +13,10 @@ class UserController {
     public function createNewProducts($products,$files) {
         // Handle form submission for creating a new products
 //       var_dump( "$user");
-
+            unset($_SESSION['Already-Exists']);
         if($products && $files){
             $this->userModel->insertdata($products,$files);
-//            var_dump($files);
-
-            header("location:/");
+//            header("location:/");
         }else{
             require "views/products/createProducts.php";
         }
@@ -35,8 +33,9 @@ var_dump($files);
     }
 //
     public function deleteProduct($id) {
+//        echo"$id";
         $this->userModel->deleteOnDb($id);
-
+        header("location:/");
         // Handle user deletion
     }
 

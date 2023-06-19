@@ -12,23 +12,24 @@
 
             <form action="/create" method="post"  enctype="multipart/form-data">
                 <div class="main">
-                <!-- <?php if(isset($_SESSION['already-exists'])) :?>
-                <h2> <?php echo $_SESSION['already-exists'] ?> </h2>
-                <?php endif; ?> -->
+                <?php if(isset($_SESSION['Already-Exists'])) :?>
+                <h2 style="color: red"> <?php echo $_SESSION['Already-Exists'] ?> </h2>
+                <?php endif; ?>
 
 
                     <h2>Create Products</h2>
                     <label for="">Product Name</label>
                     <input  type="text" name="product_name"  placeholder="Add your products"  required >
                     <label for="">Price</label>
-                    <input type="number" name="price" placeholder="Your Price" required >
+                    <input type="number" class="size step="500" name="price" placeholder="Your Price" required >
                     <label for="">Add Product Image</label>
-                    <input type="file" name="image" placeholder ="Product image" width="75px" height ="75px" required>
+                    <input type="file"  name="image" placeholder ="Product image" width="75px" height ="75px" required>
                     <label for="">Product SKU</label>
                     <input type="text" name="sku" placeholder="Product SKU" required >
                     <label for="brands">Choose your Brand </label>
                     <select name="brands" id="brands">
-                    <option value="Apple">Apple</option>
+                        <option value="">select</option>
+                        <option value="Apple">Apple</option>
                     <option value="Samsung">Samsung</option>
                     <option value="Xiaomi">Xiaomi</option>
                     <option value="OnePlus">OnePlus</option>

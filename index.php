@@ -2,6 +2,7 @@
 require 'controllers/UserController.php';
 require 'router/router.php';
 
+session_start();
 $controller = new UserController();
 $router = new router();
 

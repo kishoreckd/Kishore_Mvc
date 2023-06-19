@@ -10,7 +10,7 @@
     
 </head>
 <body>
-<table>
+<table style="width: 100%">
 <tr>
         <th rowspan>id</th>
         <th>Product_name</th>
@@ -21,6 +21,8 @@
         <th>Manufactured</th>
         <th>Available_Stock</th>
         <th>edit</th>
+    <th>delete</th>
+
 
 
 
@@ -30,7 +32,7 @@
     <tr>
         <td><?php echo $index+1?></td>
         <td><?php echo $product->product_name?></td>
-        <td><?php echo $product->price?></td>
+        <td>₹<?php echo $product->price?></td>
         <td><img class="productimage" src="<?php echo $product->image?>"></td>
         <td><?php echo $product->sku?></td>
         <td><?php echo $product->brand?></td>
@@ -42,10 +44,11 @@
                 <button type="submit" name="action"  value="view"><i class="fas fa-edit"></i>
             </button>
             </form>
-
+        </td>
+        <td>
             <form action="/delete" method="post">
-            <input type="text" name="delete" value="<?php echo $product->id?>">
-            <button type="submit" name ="action" value ="delete">delete</button>
+            <input type="hidden" name="delete" value="<?php echo $product->id?>">
+            <button type="submi8t" name ="action" >delete</button>
 
             </form>
         </td>
@@ -55,14 +58,11 @@
     <?php endforeach;?>
 <!--<a href="./views/user/create.php"> create new one</a>-->
 
-<form action="/create" method="post">
-    <button type ="submit"  >Create new one</button>
-</form>
-    
-   
-
 </table>
-  
 
+
+<form action="/create" method="post">
+    <button type ="submit" class="create"  >Create new one</button>
+</form>
 </body>
 </html>

@@ -7,12 +7,26 @@
        padding: 32px;
        width: 30%;
        margin-left: 396px;
-       margin-top: 55px;
+       margin-top: 30px;
        display: block;
     justify-content: center;
     /* align-items: center; */
     flex-wrap: wrap;
-} 
+}
+table, th, td {
+    border:1px solid black;
+    text-align: center;
+}
+.size {
+    font-size: 16px;
+}
+select {
+    width: 150px;
+    height: 30px;
+    /*margin: 10px;*/
+}
+
+
 input:invalid{
     animation: shake 300ms;
     color: red;
@@ -37,6 +51,7 @@ font-style: italic;
 
 input[type="text"],[type="number"], input[type="password"], input[type="email"]
 {
+    font-size: 16px;
     outline: none;
     height: 35px;
     width: 100%;
@@ -58,6 +73,18 @@ input[type="submit"] {
   margin-left: 91px;
   color: white;
   font-size: 20px;
+}
+.create{
+    background-color: #0c8fc1;
+    height: 48px;
+    width: 181px;
+    background-color: #0c8fc1;
+    border-radius: 11px;
+    border-color: antiquewhite;
+    margin-top: 13px;
+    margin-left: 91px;
+    color: white;
+    font-size: 20px;
 }
 input[type="submit"]:hover {
     cursor: pointer;

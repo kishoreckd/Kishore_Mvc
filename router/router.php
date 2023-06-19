@@ -62,7 +62,8 @@ class router
                             $this->controller->edit($_POST,$_FILES['image']);
                             break;
                         case 'delete':
-                            $this->controller->deleteProduct($_POST);
+                            echo "del";
+                            $this->controller->deleteProduct($_POST['delete']);
                             break;
                         case 'view':
                             $this->controller->viewOneProduct($_POST['view']);
