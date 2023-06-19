@@ -10,6 +10,9 @@
     
 </head>
 <body>
+
+<form action="/create" method="post"><button type ="submit" class="create"  >Create new one</button>
+</form>
 <table style="width: 100%">
 <tr>
         <th rowspan>id</th>
@@ -37,7 +40,10 @@
         <td><?php echo $product->sku?></td>
         <td><?php echo $product->brand?></td>
         <td><?php echo $product->manufactured?></td>
-        <td><?php echo $product->availabe_stock?></td>
+        <td><?php echo $product->availabe_stock?> <?php if( $product->availabe_stock < 10):?>
+                <p style="color: #ff0000"> <?php echo "*low quantity*" ?> </p>
+            <?php endif; ?>
+        </td>
         <td>
             <form action="/view" method="post">
                 <input type="hidden" name="view" value="<?php echo $product->id?>">
@@ -48,7 +54,8 @@
         <td>
             <form action="/delete" method="post">
             <input type="hidden" name="delete" value="<?php echo $product->id?>">
-            <button type="submi8t" name ="action" >delete</button>
+            <button type="submi8t" name ="action" ><i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
 
             </form>
         </td>
@@ -56,13 +63,7 @@
     </tr>
 
     <?php endforeach;?>
-<!--<a href="./views/user/create.php"> create new one</a>-->
 
 </table>
-
-
-<form action="/create" method="post">
-    <button type ="submit" class="create"  >Create new one</button>
-</form>
 </body>
 </html>

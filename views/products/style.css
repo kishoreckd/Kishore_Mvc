@@ -74,17 +74,22 @@ input[type="submit"] {
   color: white;
   font-size: 20px;
 }
-.create{
+.create {
     background-color: #0c8fc1;
     height: 48px;
-    width: 181px;
+    width: 157px;
     background-color: #0c8fc1;
     border-radius: 11px;
     border-color: antiquewhite;
     margin-top: 13px;
-    margin-left: 91px;
     color: white;
     font-size: 20px;
+}
+.create:hover{
+    cursor: pointer;
+    background-color: white;
+    border-color: #0c8fc1;
+    color: #0c8fc1;
 }
 input[type="submit"]:hover {
     cursor: pointer;

@@ -18,7 +18,7 @@
             <label for="">Price</label>
             <input type="number" name="price" placeholder="Your Price" value="<?php echo $product->price?>" required >
             <label for="">Add Product Image</label>
-            <input type="file" name="image" placeholder ="Product image" width="75px" height ="75px"  value="<?php echo $product->image?>" required>
+            <input type="file" name="image" placeholder ="Product image" width="75px" height ="75px"  value="<?php echo $product->image?>"  accept="image/png, image/jpeg" required>
             <label for="">Product SKU</label>
             <input type="text" name="sku" placeholder="Product SKU" value="<?php echo $product->sku?>" required >
             <label for="brands">Choose your Brand </label>
@@ -32,8 +32,8 @@
             <label for="">Manufacture Date</label>
             <input type="date" name="manufactured" placeholder="product date" value="<?php echo $product->manufactured?>" required >
             <label for="">Available Stock</label>
-            <input type="number" name="stock" placeholder="Your Price" value="<?php echo $product->availabe_stock?>" required >
-             <input type="text" name="id" value="<?php echo $product->id?>">
+            <input type="number" name="stock" placeholder="Your Price" value="<?php echo $product->available_stock?>" required >
+             <input type="hidden" name="id" value="<?php echo $product->id?>">
 
             <input type="submit" name="edit" value="Update your Products">
 <!--             <p><a href="/">Already Have an Account?</a></p> -->
