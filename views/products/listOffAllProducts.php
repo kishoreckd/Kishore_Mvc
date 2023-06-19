@@ -42,11 +42,7 @@
         <td><?php echo $product->sku?></td>
         <td><?php echo $product->brand?></td>
         <td><?php echo $product->manufactured?></td>
-        <td id="stocks"><?php echo $product->availabe_stock?>
-<!--            --><?php //if( $product->availabe_stock < 10):?>
-<!--                < p> --><?php //echo "*low quantity*" ?><!-- </p>-->
-<!--            --><?php //endif; ?>
-        </td>
+        <td id="stocks"><?php echo $product->availabe_stock?></td>
         <td>
             <form action="/view" method="post">
                 <input type="hidden" name="view" class="" value="<?php echo $product->id?>">

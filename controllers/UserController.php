@@ -25,7 +25,6 @@ class UserController {
 
     public function edit($product,$files) {
 //        var_dump($product);
-var_dump($files);
         $this->userModel->update($product,$files);
         require 'views/products/edit.php';
 

@@ -58,7 +58,7 @@ class UserModel extends database {
 
     public function update($products,$files) {
         // Perform database update operation based on $id and $data
-
+var_dump($products);
         move_uploaded_file($files["tmp_name"],"upload/" .$files["name"]);
         $imagePath= "upload/".$files["name"];
 
@@ -69,7 +69,8 @@ class UserModel extends database {
         $manufactured =$products['manufactured'];
         $avl_stock =$products['stock'];
         $id =$products['id'];
-            $this->db ->query("Update products set product_name ='$products_name',                                     price='$price',image='$imagePath',sku='$sku',brand='$brands',                                    manufactured=$manufactured,availabe_stock=$avl_stock where id='$id'");
+            $this->db ->query("Update products set product_name ='$products_name',                                     price='$price',image='$imagePath',sku='$sku',brand='$brands',
+                                manufactured='$manufactured',availabe_stock='$avl_stock' where id='$id'");
         header("location:/");
 
     }

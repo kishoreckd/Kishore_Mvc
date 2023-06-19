@@ -16,7 +16,7 @@
             <label for="">Product Name</label>
             <input  type="text" name="product_name"  placeholder="Add your products" value="<?php echo $product->product_name?>"  required >
             <label for="">Price</label>
-            <input type="number" step="500" name="price" placeholder="Your Price" value="<?php echo $product->price?>" required >
+            <input type="number" step="1" name="price" placeholder="Your Price" value="<?php echo $product->price?>" required >
             <label for="">Add Product Image</label>
             <input type="file" name="image" placeholder ="Product image" width="75px" height ="75px"  value="<?php echo $product->image?>"  accept="image/png, image/jpeg" required>
             <label for="">Product SKU</label>
