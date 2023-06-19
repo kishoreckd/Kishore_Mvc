@@ -21,7 +21,7 @@
                     <label for="">Product Name</label>
                     <input  type="text" name="product_name"  placeholder="Add your products"  required >
                     <label for="">Price</label>
-                    <input type="number" class="size step="500" name="price" placeholder="Your Price" required >
+                    <input type="number" class="size " step="100" name="price" placeholder="Your Price" required >
                     <label for="">Add Product Image</label>
                     <input type="file"  name="image" placeholder ="Product image" width="75px" height ="75px" required>
                     <label for="">Product SKU</label>
@@ -37,7 +37,7 @@
                     <label for="">Manufacture Date</label>
                     <input type="date" name="manufactured" placeholder="product date" required >
                     <label for="">Available Stock</label>
-                    <input type="number" name="stock" placeholder="Your Price" required >
+                    <input type="number" step="1" name="stock" placeholder="Your Price" required >
                      <!-- <input type="file" name="image" placeholder ="Product image" width="75px" height ="75px" required> -->
 
                     <input type="submit" name="create" value="Add your Products">
